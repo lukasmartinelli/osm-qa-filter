@@ -1,8 +1,6 @@
 'use strict';
 
 const featureFilter = require('mapbox-gl-style-spec/lib/feature_filter');
-const turf = require('turf');
-
 const ff = featureFilter(global.mapOptions.filter)
 
 module.exports = function(tileLayers, tile, write, done) {
