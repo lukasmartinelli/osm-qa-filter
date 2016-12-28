@@ -1,0 +1,37 @@
+{
+  "name": "osm-feature-extract",
+  "version": "1.0.0",
+  "description": "Extract GeoJSON features using filters from OpenStreetMap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=5.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukasmartinelli/osm-feature-extract.git"
+  },
+  "keywords": [
+    "osm",
+    "mapbox"
+  ],
+  "author": "Lukas Martinelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukasmartinelli/osm-feature-extract/issues"
+  },
+  "homepage": "https://github.com/lukasmartinelli/osm-feature-extract#readme",
+  "dependencies": {
+    "JSONStream": "^1.1.4",
+    "commander": "^2.9.0",
+    "fast-stats": "0.0.3",
+    "geojson-stream": "0.0.1",
+    "lodash": "^4.15.0",
+    "mapbox-gl-style-spec": "^8.11.0",
+    "tile-reduce": "^3.1.1",
+    "tilebelt": "^1.0.1",
+    "turf": "^3.0.14"
+  }
+}
