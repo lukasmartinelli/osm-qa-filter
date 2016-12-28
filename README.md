@@ -1,4 +1,4 @@
-# osm-feature-extract [![BSD-3 license](https://img.shields.io/badge/license-BSD-3-blue.svg)](https://tldrlegal.com/license/mit-license) [![Build Status](https://travis-ci.org/lukasmartinelli/osm-feature-extract.svg)](https://travis-ci.org/lukasmartinelli/osm-feature-extract)
+# osm-feature-extract [![BSD-3 license](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://tldrlegal.com/license/mit-license) [![Build Status](https://travis-ci.org/lukasmartinelli/osm-feature-extract.svg)](https://travis-ci.org/lukasmartinelli/osm-feature-extract)
 
 A [Tile Reduce](https://github.com/mapbox/tile-reduce) processor filter features from the [OSM QA Tiles](osmlab.github.io/osm-qa-tiles/)
 using [Mapbox GL feature filters](https://www.mapbox.com/mapbox-gl-style-spec/#types-filter).
