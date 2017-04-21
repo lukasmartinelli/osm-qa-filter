@@ -3,6 +3,7 @@
 const tileReduce = require('tile-reduce');
 const path = require('path');
 const fs = require('fs');
+const stringify = require('stringify-stream');
 const geoJSONStream = require('geojson-stream');
 const program = require('commander');
 
@@ -10,11 +11,15 @@ program
     .option('-o, --geojson-file <f>', 'GeoJSON target file')
     .option('-f, --filter <ff>', 'Feature filter')
     .option('-m, --mbtiles-file <f>', 'MBTiles source file')
+    .option('--json-lines', 'Output line delimited GeoJSON')
     .parse(process.argv);
 
 if(program.mbtilesFile && program.geojsonFile && program.filter) {
     const outputStream = fs.createWriteStream(program.geojsonFile);
-    const featureStream = geoJSONStream.stringify();
+    let featureStream = geoJSONStream.stringify();
+    if (program.jsonLines) {
+      featureStream = stringify();
+    }
     featureStream.pipe(outputStream);
 
     let foundFeatureCount = 0;

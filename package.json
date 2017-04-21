@@ -1,7 +1,7 @@
 {
-  "name": "osm-feature-extract",
+  "name": "osm-qa-filter",
   "version": "1.0.0",
-  "description": "Extract GeoJSON features using filters from OpenStreetMap",
+  "description": "Extract GeoJSON features from OpenStreetMap QA tiles using GL filters",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lukasmartinelli/osm-feature-extract.git"
+    "url": "git+https://github.com/lukasmartinelli/osm-qa-filter.git"
   },
   "keywords": [
     "osm",
@@ -20,14 +20,15 @@
   "author": "Lukas Martinelli",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lukasmartinelli/osm-feature-extract/issues"
+    "url": "https://github.com/lukasmartinelli/osm-qa-filter/issues"
   },
-  "homepage": "https://github.com/lukasmartinelli/osm-feature-extract#readme",
+  "homepage": "https://github.com/lukasmartinelli/osm-qa-filter#readme",
   "dependencies": {
     "JSONStream": "^1.1.4",
     "commander": "^2.9.0",
     "geojson-stream": "0.0.1",
     "mapbox-gl-style-spec": "^8.11.0",
+    "stringify-stream": "^1.0.5",
     "tile-reduce": "^3.1.1"
   }
 }
