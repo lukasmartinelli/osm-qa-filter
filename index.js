@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 const tileReduce = require('tile-reduce');

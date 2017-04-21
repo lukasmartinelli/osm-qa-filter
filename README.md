@@ -1,14 +1,14 @@
-# osm-feature-extract [![Build Status](https://travis-ci.org/lukasmartinelli/osm-feature-extract.svg)](https://travis-ci.org/lukasmartinelli/osm-feature-extract) [![BSD-3 license](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://tldrlegal.com/license/mit-license)
+# osm-qa-filter [![Build Status](https://travis-ci.org/lukasmartinelli/osm-feature-extract.svg)](https://travis-ci.org/lukasmartinelli/) [![BSD-3 license](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://tldrlegal.com/license/mit-license)
 
 A [Tile Reduce](https://github.com/mapbox/tile-reduce) processor to extract GeoJSON features from the [OSM QA Tiles](osmlab.github.io/osm-qa-tiles/)
 using [Mapbox GL feature filters](https://www.mapbox.com/mapbox-gl-style-spec/#types-filter).
 
-## Run yourself
+## Run
 
 First install the required dependencies. You need a new Node version (`> 5`).
 
 ```bash
-npm install
+npm install -g osm-qa-filter
 ```
 
 Now download the [Mapbox QA Tiles](https://www.mapbox.com/blog/osm-qa-tiles/).
@@ -19,9 +19,17 @@ wget https://s3.amazonaws.com/mapbox/osm-qa-tiles/latest.country/liechtenstein.m
 gunzip liechtenstein.mbtiles.gz
 ```
 
-Invoke the `index.js` file with the planet file and output GeoJSON file.
+Invoke `osm-qa-filter` file with the planet file and output GeoJSON file.
 
 ```bash
-node index.js -m planet.mbtiles -o postbox.geojson \
+osm-qa-filter -m planet.mbtiles -o postbox.geojson \
+    --filter '["all", ["==", "amenity", "post_box"], ["$type", "==", "Point"]]'
+```
+
+You can also specify to output line delimited GeoJSON features instead of a single GeoJSON object using `--json-lines`.
+
+```bash
+osm-qa-filter -m planet.mbtiles -o postbox.geojson \
+    --json-lines \
     --filter '["all", ["==", "amenity", "post_box"], ["$type", "==", "Point"]]'
 ```
