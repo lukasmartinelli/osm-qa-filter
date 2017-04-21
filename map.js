@@ -7,6 +7,11 @@ module.exports = function(tileLayers, tile, write, done) {
   const layer = tileLayers.osm.osm;
   const features = layer.features.filter(function(ft) {
     return ff(ft)
-  })
-  done(null, features);
+  });
+
+  features.forEach(function(feature) {
+    write(JSON.stringify(feature) + '\n');
+  });
+
+  done(null, features.length);
 };

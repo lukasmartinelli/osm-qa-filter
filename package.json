@@ -27,11 +27,8 @@
   },
   "homepage": "https://github.com/lukasmartinelli/osm-qa-filter#readme",
   "dependencies": {
-    "JSONStream": "^1.1.4",
     "commander": "^2.9.0",
-    "geojson-stream": "0.0.1",
     "mapbox-gl-style-spec": "^8.11.0",
-    "stringify-stream": "^1.0.5",
     "tile-reduce": "^3.1.1"
   }
 }

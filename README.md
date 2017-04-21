@@ -25,11 +25,3 @@ Invoke `osm-qa-filter` file with the planet file and output GeoJSON file.
 osm-qa-filter -m planet.mbtiles -o postbox.geojson \
     --filter '["all", ["==", "amenity", "post_box"], ["$type", "==", "Point"]]'
 ```
-
-You can also specify to output line delimited GeoJSON features instead of a single GeoJSON object using `--json-lines`.
-
-```bash
-osm-qa-filter -m planet.mbtiles -o postbox.geojson \
-    --json-lines \
-    --filter '["all", ["==", "amenity", "post_box"], ["$type", "==", "Point"]]'
-```
