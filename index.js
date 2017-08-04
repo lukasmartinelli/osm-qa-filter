@@ -26,7 +26,7 @@ if(program.mbtilesFile && program.geojsonFile && program.filter) {
       sources: [{
         name: 'osm',
         mbtiles: path.normalize(program.mbtilesFile),
-        raw: false
+        raw: true
       }]
     })
     .on('reduce', (featureCount, tile) => {
