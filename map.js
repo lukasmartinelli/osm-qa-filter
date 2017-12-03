@@ -5,9 +5,14 @@ const ff = featureFilter(global.mapOptions.filter)
 
 module.exports = function(tileLayers, tile, write, done) {
   const layer = tileLayers.osm.osm;
-  const features = layer.features.filter(function(ft) {
-    return ff(ft)
-  });
+
+  let features = [];
+  for (var i = 0; i < layer.length; i++) {
+    var ft = layer.feature(i);
+    if (ff(ft)) {
+      features.push(ft.toGeoJSON(tile[0], tile[1], tile[2]));
+    }
+  }
 
   features.forEach(function(feature) {
     write(JSON.stringify(feature) + '\n');
