@@ -1,4 +1,4 @@
-# osm-qa-filter [![Build Status](https://travis-ci.org/lukasmartinelli/osm-feature-extract.svg)](https://travis-ci.org/lukasmartinelli/) [![BSD-3 license](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://tldrlegal.com/license/mit-license)
+# osm-qa-filter [![Build Status](https://travis-ci.org/lukasmartinelli/osm-qa-filter.svg?branch=master)](https://travis-ci.org/lukasmartinelli/) [![BSD-3 license](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://tldrlegal.com/license/mit-license)
 
 A [Tile Reduce](https://github.com/mapbox/tile-reduce) processor to extract GeoJSON features from the [OSM QA Tiles](osmlab.github.io/osm-qa-tiles/)
 using [Mapbox GL feature filters](https://www.mapbox.com/mapbox-gl-style-spec/#types-filter).
