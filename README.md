@@ -3,6 +3,8 @@
 A [Tile Reduce](https://github.com/mapbox/tile-reduce) processor to extract GeoJSON features from the [OSM QA Tiles](osmlab.github.io/osm-qa-tiles/)
 using [Mapbox GL feature filters](https://www.mapbox.com/mapbox-gl-style-spec/#types-filter).
 
+> :warning: This repository is no longer maintained by Lukas Martinelli.
+
 ## Run
 
 First install the required dependencies. You need a new Node version (`> 5`).
